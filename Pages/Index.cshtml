@@ -1,0 +1,66 @@
+﻿@page
+@model IndexModel
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="~/css/index.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="upper">
+        <button class="upper--button" onclick="newOrder();">Add Order</button>
+
+        <div class="date-filter">
+            <label for="start-date">От:</label>
+            <input type="date" id="start-date">
+
+            <label for="end-date">До:</label>
+            <input type="date" id="end-date">
+        </div>
+
+        <div class="upper--filter">
+            <div> Номер заказа <br /><br />  </div>
+            <select multiple id="OrderNumber" class="upper--select"></select>
+        </div>
+
+        <div class="upper--filter">
+            <div> Название элемента Заказа<br />  </div>
+            <select multiple id="OrderItemName" class="upper--select"></select>
+        </div>
+
+        <div class="upper--filter">
+            <div> Единица измерения элемента заказа<br />  </div>
+            <select multiple id="OrderItemUnit" class="upper--select"></select>
+        </div>
+
+        <div class="upper--filter">
+            <div> Поставщик <br /> <br />  </div>
+            <select multiple id="ProviderName" class="upper--select"></select>
+        </div>
+
+        <div class="upper--filter">
+            <div> ID Поставщика <br /> <br />  </div>
+            <select multiple id="ProviderId" class="upper--select"></select>
+        </div>
+
+        <button class="upper--button" onclick="applyFilters();">Apply Filters</button>
+    </div>
+
+    <div class="lower">
+        <table id="OrdersTable">
+            <tr>
+                <th class="lower--cell">Номер Заказа</th>
+                <th class="lower--cell">Дата Заказа</th>
+                <th class="lower--cell">Поставщик</th>
+            </tr>
+        </table>
+    </div>
+    <div class="buttons">
+        <button id="prev" onclick="prevPage();"> < </button>
+        <button id="next" onclick="nextPage();"> > </button>
+    </div>
+</body>
+
+<script type="text/javascript" src="~/js/index.js"></script>
+

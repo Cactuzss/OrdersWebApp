@@ -1,0 +1,82 @@
+﻿body {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+}
+
+.upper {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+}
+
+.upper--textbox {
+    margin: 5px;
+    font-size: large;
+    width: 55%;
+    max-height: 25px;
+    resize: none;
+}
+
+.upper--left {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
+.order--info {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+
+.order--provider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    width: 20%;
+}
+
+.order--provider-select {
+    margin: 15px;
+    width: 100%;
+}
+
+.lower {
+    width: 50%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    align-content:center;
+}
+
+.items--table{
+    width:100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 20px 0;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.add-button{
+    margin: 15px;
+    padding: 15px;
+}

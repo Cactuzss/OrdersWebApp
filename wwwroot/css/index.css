@@ -1,0 +1,68 @@
+﻿body {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+}
+
+.upper {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+.upper--button {
+    margin: 15px;
+    width: 100px;
+    height: 40px;
+}
+
+.upper--filter {
+    max-width: 150px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.upper--select {
+    min-width: 100px;
+}
+
+.lower {
+    display: flex;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.lower--cell {
+    padding: 5px 20px 5px 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 20px 0;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+}

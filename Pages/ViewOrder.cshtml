@@ -1,0 +1,57 @@
+﻿@page
+@model ViewOrderModel
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="~/css/vieworder.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="upper">
+        <div class="upper--textbox">Заказ </div> <div id="orderId" class="upper--textbox"> @Model.OrderID </div>
+        <div class="upper--left">
+            <button id="editButton" onclick="onEdit();"> Редактировать </button>
+            <button id="deleteButton" onclick="onDelete();"> Удалить </button>
+            <button id="backButton" onclick="window.location.replace(url);"> Назад </button>
+        </div>
+    </div>
+    <div class="order--info">
+        <div class="order--date">
+            <label for="start-date">Дата </label>
+            <input type="date" id="start-date" readonly>
+        </div>
+        <div class="order--provider">
+            <label for="provider">Поставщик </label>
+            <div id="provider" class="order--provider-select"> @Model.ProviderID </div>
+        </div>
+        <div>
+            Информация о заказе
+        </div>
+    </div>
+    <div class="lower">
+        <table class="lower--table" id="itemsTable">
+            <tr>
+                <th>
+                    Название элемента
+                </th>
+                <th>
+                    Количество
+                </th>
+                <th>
+                    Единица измерения
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <p>Вы уверены, что хотите удалить данный заказ?</p>
+            <button id="confirmYes">Да</button>
+            <button id="confirmNo">Нет</button>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="~/js/vieworder.js"></script>
